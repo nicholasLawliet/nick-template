@@ -1,0 +1,41 @@
+.animate-custom-element {
+    opacity: 0;
+}
+
+.animate-custom-element.fade {
+    opacity: 0;
+    &[data-active] {
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+}
+
+.animate-custom-element.fade-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+    &[data-active] {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: opacity 0.5s, transform 0.5s;
+    }
+}
+
+.animate-custom-element.fade-left {
+    opacity: 0;
+    transform: translateX(-50%);
+    &[data-active] {
+        opacity: 1;
+        transform: translateX(0%);
+        transition: opacity 0.5s, transform 0.5s;
+    }
+}
+
+.animate-custom-element.fade-right {
+    opacity: 0;
+    transform: translateX(50%);
+    &[data-active] {
+        opacity: 1;
+        transform: translateX(0%);
+        transition: opacity 0.5s, transform 0.5s;
+    }
+}
